@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTItle": {
+      "type": "string"
+    },
+    "AboutHero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.hero"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

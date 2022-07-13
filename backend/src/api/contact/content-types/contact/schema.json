@@ -1,0 +1,26 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "ContactHero": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.hero"
+    }
+  }
+}
