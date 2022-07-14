@@ -34,6 +34,7 @@
 	"dependencies": {
 		"@apollo/client": "^3.6.9",
 		"@rollup/plugin-typescript": "^8.3.3",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.68",
 		"@sveltejs/adapter-static": "^1.0.0-next.35",
 		"@tailwindcss/typography": "^0.5.4",
 		"apollo-cache-inmemory": "^1.6.6",
