@@ -29,16 +29,6 @@
 			isActive: false
 		}
 	];
-	function toggleActiveNavigationClass(pn) {
-		navigation.forEach((nav) => {
-			nav.isActive = nav.url === pn;
-		});
-		return pn;
-	}
-	afterNavigate(({ to }) => {
-		toggleActiveNavigationClass(to.pathname);
-		console.log($page.url.pathname);
-	});
 </script>
 
 <div>

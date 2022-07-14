@@ -1,11 +1,15 @@
 const { init } = require('../serverless.js');
 
 exports.handler = init({
-	appDir: "_app",
-	assets: new Set(["favicon.png"]),
-	mimeTypes: {".png":"image/png"},
+	appDir: '_app',
+	assets: new Set(['favicon.png']),
+	mimeTypes: { '.png': 'image/png' },
 	_: {
-		entry: {"file":"start-e060c663.js","js":["start-e060c663.js","chunks/index-eeee214d.js","chunks/singletons-d1fb5791.js"],"css":[]},
+		entry: {
+			file: 'start-e060c663.js',
+			js: ['start-e060c663.js', 'chunks/index-eeee214d.js', 'chunks/singletons-d1fb5791.js'],
+			css: []
+		},
 		nodes: [
 			() => Promise.resolve().then(() => require('../server/nodes/0.js')),
 			() => Promise.resolve().then(() => require('../server/nodes/1.js')),
@@ -19,74 +23,73 @@ exports.handler = init({
 		routes: [
 			{
 				type: 'page',
-				id: "",
+				id: '',
 				pattern: /^\/$/,
 				names: [],
 				types: [],
-				path: "/",
+				path: '/',
 				shadow: null,
-				a: [0,2],
+				a: [0, 2],
 				b: [1]
 			},
 			{
 				type: 'page',
-				id: "blog",
+				id: 'blog',
 				pattern: /^\/blog\/?$/,
 				names: [],
 				types: [],
-				path: "/blog",
+				path: '/blog',
 				shadow: null,
-				a: [0,3],
+				a: [0, 3],
 				b: [1]
 			},
 			{
 				type: 'page',
-				id: "client-portal",
+				id: 'client-portal',
 				pattern: /^\/client-portal\/?$/,
 				names: [],
 				types: [],
-				path: "/client-portal",
+				path: '/client-portal',
 				shadow: null,
-				a: [0,4],
+				a: [0, 4],
 				b: [1]
 			},
 			{
 				type: 'page',
-				id: "contact",
+				id: 'contact',
 				pattern: /^\/contact\/?$/,
 				names: [],
 				types: [],
-				path: "/contact",
+				path: '/contact',
 				shadow: null,
-				a: [0,5],
+				a: [0, 5],
 				b: [1]
 			},
 			{
 				type: 'page',
-				id: "gallery",
+				id: 'gallery',
 				pattern: /^\/gallery\/?$/,
 				names: [],
 				types: [],
-				path: "/gallery",
+				path: '/gallery',
 				shadow: null,
-				a: [0,6],
+				a: [0, 6],
 				b: [1]
 			},
 			{
 				type: 'page',
-				id: "blog/article-[id]",
+				id: 'blog/article-[id]',
 				pattern: /^\/blog\/article-([^/]+?)\/?$/,
-				names: ["id"],
+				names: ['id'],
 				types: [null],
 				path: null,
 				shadow: null,
-				a: [0,7],
+				a: [0, 7],
 				b: [1]
 			}
 		],
 		matchers: async () => {
-			
-			return {  };
+			return {};
 		}
 	}
 });
