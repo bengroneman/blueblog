@@ -20,14 +20,12 @@
 	</a>
 	<div class="mt-6 flex items-center">
 		<div class="flex-shrink-0">
-			<a href="#">
-				<span class="sr-only">{article.attributes.author.data.attributes.name}</span>
-				<img
-					class="h-10 w-10 rounded-full"
-					src="http://localhost:1337{article.attributes.image.data[0].attributes.url}"
-					alt={article.attributes.image.data[0].attributes.alternativeText}
-				/>
-			</a>
+			<span class="sr-only">{article.attributes.author.data.attributes.name}</span>
+			<!--			<img-->
+			<!--				class="h-10 w-10 rounded-full"-->
+			<!--				src="http://localhost:1337{article.attributes.image.data.attributes.url}"-->
+			<!--				alt={article.attributes.image.data.attributes.alternativeText}-->
+			<!--			/>-->
 		</div>
 		<div class="ml-3">
 			<p class="text-sm font-medium text-gray-900">

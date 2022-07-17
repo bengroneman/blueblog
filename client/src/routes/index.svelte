@@ -13,7 +13,9 @@
 	});
 </script>
 
-<Hero content={heroContent} />
+{#if heroContent}
+	<Hero content={heroContent} />
+{/if}
 
 <ArticleShowcase />
 
