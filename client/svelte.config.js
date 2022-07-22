@@ -5,7 +5,8 @@ import typescript from '@rollup/plugin-typescript';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		prerender: true,
 	},
 	preprocess: [
 		preprocess({
