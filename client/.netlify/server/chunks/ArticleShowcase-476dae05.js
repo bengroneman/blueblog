@@ -1,8 +1,6 @@
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -16,19 +14,17 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  css: () => css,
-  entry: () => entry,
-  index: () => index,
-  js: () => js,
-  module: () => module2
+  A: () => ArticleShowcase
 });
 module.exports = __toCommonJS(stdin_exports);
-var module2 = __toESM(require("../entries/pages/index.svelte.js"));
-const index = 7;
-const entry = "pages/index.svelte-abb3905a.js";
-const js = ["pages/index.svelte-abb3905a.js", "chunks/index-eeee214d.js", "chunks/ArticleShowcase-0a628830.js", "chunks/utils-6a796627.js"];
-const css = [];
+var import_index_829c628b = require("./index-829c628b.js");
+const ArticleShowcase = (0, import_index_829c628b.c)(($$result, $$props, $$bindings, slots) => {
+  let articles = [];
+  let loading = true;
+  return `${articles && !loading ? `<div><div class="${"bg-white pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8"}"><div class="${"relative max-w-lg mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl"}"><div><h2 class="${"text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"}">Recent publications
+					</h2></div>
+				<div class="${"grid lg:grid-cols-3 sm:grid-cols-1"}">${`${`<p class="${"text-amber-600 text-bold py-2"}">Loading...</p>`}`}</div></div></div></div>` : ``}`;
+});

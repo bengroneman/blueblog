@@ -6,7 +6,11 @@ import typescript from '@rollup/plugin-typescript';
 const config = {
 	kit: {
 		adapter: adapter(),
-		prerender: true,
+		edge: true,
+		split: true,
+		prerender: {
+			default: true,
+		},
 	},
 	preprocess: [
 		preprocess({
