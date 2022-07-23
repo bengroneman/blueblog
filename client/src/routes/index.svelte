@@ -6,17 +6,26 @@
 	import { getPayload } from '../lib/utils';
 	import { onMount } from 'svelte';
 
-	const url = 'http://localhost:1337/api/homepage?populate=*';
+    const host = 'http://localhost:1337/'
+	const homepage_endpiont = `${host}api/homepage?populate=*`;
+    const articles_endpoint = `${host}api/articles?populate=*`;
 	let heroContent = {};
+    let articles = [];
+    let loading = true;
+
 	onMount(async () => {
-		heroContent = await getPayload(url);
+		heroContent = await getPayload(homepage_endpiont);
+		articles = await getPayload(articles_endpoint);
+		loading = false;
 	});
 </script>
 
-{#if heroContent}
+{#if herContent && !loading}
 	<Hero content={heroContent} />
 {/if}
 
-<ArticleShowcase />
+{#if articles && !loading}
+    <ArticleShowcase {articles} />
+{/if}
 
 <!--<P5Playground />-->

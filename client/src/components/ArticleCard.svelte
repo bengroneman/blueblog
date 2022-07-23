@@ -1,7 +1,7 @@
 <script lang="js">
 	export let article;
 </script>
-
+{#if article.attributes}
 <div class="mt-12">
 	<div>
 		<a href="/blog/article-{article.id}" class="inline-block">
@@ -13,14 +13,19 @@
 		</a>
 	</div>
 	<a href="/blog/article-{article.id}" class="block mt-4">
+    {#if article.attributes.category}
 		<p class="text-xl font-semibold text-gray-900">
+
 			{article.attributes.category.data.attributes.name}
 		</p>
+    {/if}
 		<p class="mt-3 text-base text-gray-500">{article.attributes.description}</p>
 	</a>
 	<div class="mt-6 flex items-center">
 		<div class="flex-shrink-0">
+        {#if article.attributes.author}
 			<span class="sr-only">{article.attributes.author.data.attributes.name}</span>
+        {/if}
 			<!--			<img-->
 			<!--				class="h-10 w-10 rounded-full"-->
 			<!--				src="http://localhost:1337{article.attributes.image.data.attributes.url}"-->
@@ -29,7 +34,9 @@
 		</div>
 		<div class="ml-3">
 			<p class="text-sm font-medium text-gray-900">
+            {#if article.attributes.author}
 				<a href="/"> {article.attributes.author.data.attributes.name} </a>
+            {/if}
 			</p>
 			<div class="flex space-x-1 text-sm text-gray-500">
 				<time datetime="2020-03-16"> {article.attributes.createdAt} </time>
@@ -39,3 +46,4 @@
 		</div>
 	</div>
 </div>
+{/if}
