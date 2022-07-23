@@ -20,7 +20,7 @@
 	});
 </script>
 
-{#if herContent && !loading}
+{#if heroContent && !loading}
 	<Hero content={heroContent} />
 {/if}
 
